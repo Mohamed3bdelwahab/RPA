@@ -1,0 +1,326 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "TransactionItem&StateMachine_1",
+        "SystemException&StateMachine_1",
+        "BusinessException&StateMachine_1",
+        "TransactionNumber&StateMachine_1",
+        "Config&StateMachine_1",
+        "RetryNumber&StateMachine_1",
+        "TransactionField2&StateMachine_1",
+        "TransactionField1&StateMachine_1",
+        "TransactionID&StateMachine_1",
+        "dt_TransactionData&StateMachine_1",
+        "ConsecutiveSystemExceptions&StateMachine_1",
+        "WIList&StateMachine_1",
+        "ShouldStop&Sequence_25"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_OrchestratorQueueName",
+        "in_OrchestratorQueueFolder"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/InitAllApplications.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "Out_User&Sequence_9",
+        "Out_PW&Sequence_9"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "ACME/Login/GetCred.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "FlowName&Sequence_20"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "out_USer",
+        "Out_PW"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/GetTransactionData.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "FlowName&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "In_WIList",
+        "in_TransactionNumber",
+        "in_Config",
+        "out_TransactionItem",
+        "out_TransactionField1",
+        "out_TransactionField2",
+        "out_TransactionID",
+        "io_dt_TransactionData"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/Process.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "strConfermationID&Sequence_1",
+        "dt_AllMonths&Sequence_4",
+        "TaxID&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "In_WIID",
+        "in_TransactionItem",
+        "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/SetTransactionStatus.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "QueueRetry&Sequence_17",
+        "ScreenshotPath&Sequence_17"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_BusinessException",
+        "in_TransactionField1",
+        "in_TransactionField2",
+        "in_TransactionID",
+        "in_SystemException",
+        "in_Config",
+        "in_TransactionItem",
+        "io_RetryNumber",
+        "io_TransactionNumber",
+        "io_ConsecutiveSystemExceptions"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "ACME/GetData/Navtodetailes.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "FlowName&Sequence_4"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "In_URLWorkItem",
+        "in_WIID"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "ACME/GetData/GetInfo.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "FlowName&Sequence_6",
+        "ClientInformation&Sequence_4"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "Out_TaxID"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "DownloadReport/NavTomonthlyReport.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "FlowName&Sequence_4"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/InitAllSettings.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt_SettingsAndConstants&Sequence_5",
+        "dt_Assets&Sequence_6",
+        "AssetValue&Sequence_11"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_ConfigFile",
+        "in_ConfigSheets",
+        "out_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/CloseAllApplications.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/KillAllProcesses.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "ACME/Login/LoginAcme.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "FlowName&Sequence_12"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "In_acmeSite",
+        "In_AcmeUser",
+        "In_AcmePW"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "ACME/GetData/ExtractDt.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "FlowName&Sequence_38"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "Out_dt_TransactionData"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "ACME/Login/NavigateWorkItem.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "FlowName&Sequence_17"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "In_URLWorkItem"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "ACME/UpdateWorkItem.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "FlowName&Sequence_9"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_Comment",
+        "in_Status",
+        "in_WIID",
+        "In_AcmeSite"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "DownloadReport/DownloadReports.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "blnReportNotFound&Sequence_6",
+        "ArrMonths&Sequence_26",
+        "CurrentIndex&Sequence_26",
+        "FlowName&Sequence_26",
+        "str_downloadedReport&Sequence_7",
+        "Dt_Month&Sequence_7"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "In_TaxID",
+        "Out_dt_AllMonths"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "DownloadReport/YearlyReport.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "FlowName&Sequence_27"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "In_TaxID",
+        "In_dt_AllMonths"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "UploadReport/NavToUpload.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "FlowName&Sequence_25"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "UploadReport/Upload.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "FilePath&Sequence_29",
+        "FlowName&Sequence_29",
+        "blnSuccess&Sequence_18",
+        "strConfirmationMsg&Sequence_19"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "In_TaxID",
+        "out_strConfirmationID"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/BeforeStrat.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "FlowName"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "ACME/UploadReports.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "FlowName&Sequence_16"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_Config",
+        "strConfermationID",
+        "TaxID"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}

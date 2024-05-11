@@ -1,0 +1,323 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Upload" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:ora="clr-namespace:OS.RunningJI.Activities;assembly=OS.RunningJI.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:si="clr-namespace:System.IO;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="out_strConfirmationID" Type="OutArgument(x:String)" />
+    <x:Property Name="In_TaxID" Type="InArgument(x:String)" />
+  </x:Members>
+  <sap:VirtualizedContainerService.HintSize>1153.3333333333333,840.6666666666666</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>OS.RunningJI.Activities</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Windows.Forms</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>OS.RunningJI.Activities</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Upload" sap:VirtualizedContainerService.HintSize="416,776" sap2010:WorkflowViewState.IdRef="Sequence_29">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="FlowName" />
+      <Variable x:TypeArguments="si:FileInfo" Name="FilePath" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ora:WorkflowFilePath ContinueOnError="{x:Null}" DisplayName="Workflow File Path" sap:VirtualizedContainerService.HintSize="354,65.33333333333333" sap2010:WorkflowViewState.IdRef="WorkflowFilePath_1" WorkflowFilePathArgument="[FlowName]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,184.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;I Started &quot; + (FlowName.Split(&quot;\&quot;c).Last).ToString.Split(&quot;.&quot;)(0) + vbNewLine+&quot; at &quot;+ Date.Now.ToString]" />
+    <ui:GetFileInfoX DisplayName="Get File Info" FilePath="[&quot;Data\Output\Yearly-Report-2023-&quot;+In_TaxID+&quot;.xlsx&quot;]" sap:VirtualizedContainerService.HintSize="354,176.66666666666666" sap2010:WorkflowViewState.IdRef="GetFileInfoX_1" Output="[FilePath]" />
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: ACME System 1 - Upload Yearly Report" sap:VirtualizedContainerService.HintSize="354,94" sap2010:WorkflowViewState.IdRef="NApplicationCard_6" InteractionMode="DebuggerApi" ScopeGuid="9d4ec022-bf2c-4c01-b9a6-3512c1be4f3f" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="654,2676.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_16">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Vendor TaxID'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="592,262.6666666666667" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="9d4ec022-bf2c-4c01-b9a6-3512c1be4f3f" Text="[In_TaxID]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/reports/upload" DesignTimeRectangle="344, 523, 606, 43" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'INPUT vendorTaxID'" FullSelectorArgument="&lt;webctrl id='vendorTaxID' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='vendorTaxID' tag='INPUT' type='text' class='form-control' aaname='' /&gt;" Guid="eede0f46-19b0-412c-baa7-a87a9444cba6" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAmIAAAAvCAYAAABAD6Z9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAIBSURBVHhe7dq7juJQFETR+f9vgxBETgAJOAHx5o6qhS2YFgntnpOsJVVgY/Kta/9pAACUEGIAAEW+hdhms2mLxaJNp9M2mUzMzMzM7AdLU6Wt0lj/egmx5XLZZrNZW61Wbbvdtq7rzMzMzOwHS1OlrdJYaa1nQ4il0vJA/rDf79vhcGjH47GdTiczMzMz+2BpqTRV2iqNldZ6PhkbQixHZuv1+uvh6/Xa7ve7mZmZmY2wtFUaK62V5uoNIZb3l7vdrt1ut8cdAADGksbKyViaqzeEWD4myxFaqg0AgHGlsdJaaa7eS4hdLpfHFQAAY0trvQ2xvL8EAOB3pLWEGABAASEGAFBEiAEAFBFiAABFhBgAQBEhBgBQRIgBABQRYgAARYQYAEARIQYAUESIAQAUEWIAAEWEGABAESEGAFBEiAEAFBFiAABFhBgAQBEhBgBQRIgBABQRYgAARYQYAEARIQYAUESIAQAUEWIAAEWEGABAESEGAFBEiAEAFBFiAABFhBgAQBEhBgBQ5G2ITafTdj6fH1cAAIwtrZXm6g0htlgs2mazeVwBADC2tFaaqzeEWH6Yz+deTwIA/II0Vlrr+eBrCLFYLpdfD3Rd12632+MuAACfSlOlrdJYaa1nLyEW/ZFZ3l/mYzIzMzMz+3xpqnefgH0LMQAA/g8hBgBQorW/G5Kr2HQMxsEAAAAASUVORK5CYII=" InformativeScreenshot="3412d508fc6670c7f1ddfe790e7c24f9.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - Upload Yearly Report' /&gt;" SearchSteps="FuzzySelector, Image" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="344, 492, 116, 25" ElementType="Text" FriendlyName="'Vendor TaxID'" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='' aaname='Vendor TaxID:' check:innerText='Vendor TaxID:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHgAAAAdCAYAAABhXag7AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAKoSURBVGhD7ZbrbcMwDIS7U+aqVzGySTJJkTEKdAfViiXz+JLlNGkBlQfwRxSZIu+TZL+l0NAKwIMrAA+uADy4AvDgCsCDKwAPrgL4K13eT+l0yjGn2zoodEvz/f8l3i/LE7+kz0uayrrzRxl7lT7m4sFOPK1/8B1y3s6wloopXT7LxA5tJ/jrOm1JTCOh+ZcbjQrAZkzXvgroigYjT2d9hmlR74S/SAHYjR4/4B3cuqbhekb40hDZuIDDC7euGqxhiZzPBSzm5hAbk26lpR+s1djAltjzZWwV+LEFznG8hBrWE7gD2NhIeNNSH3aeLPaRRQ8L86GwajJbiAU0hLeCGbiOZRqPDXAzL63v1diz87NswK06WzCtb5jjgLP0bdoJGI3DO141as6jBrYxBsI2vs7FMQLAzVzHndOBa5WdzQB3nlqUBXgbQyONA5BFIKY0n2su3NSPAab1aq5ewOZEGFPGgcGLVPPOhtGbwS9QmQc55UmUddFv63WwL69PEtRdgtekTzv3we77OGBfArBhimEo7UwviiEujAZgedJkjlZz4r99QG3Zz2uoGHLT4QbVwP4AsDx1VpP/GTDrvQIAiBIw90rW/BhgyrnflwbMFp3TbBjfbdwjgGVT0jw3p67r+YCpTnbVeoCh1i1Yfw8AhrW8DYAyAGNjFF7h1CgUWzdDN2C+JuXk77A1B6yD4NDMnW+FXrUAk7lYD/Yp5gIY0zML8E64a5XRLBOw3nnaIL8IuIYOAJYwrdhyqPogoMHnA8YxO2qNOK+OkWfVox8AZq+yo4DxAZUMhNfFPYSRhwBniXVzPjeHnLuEqPMVgLM4gPwf1JJrwA2INeH4HYQNpg3Y+PZw8mQ5gEOjKAAPrgA8uALw4ArAgysAD64APLgC8OAKwEMrpW927H1rbRsvPAAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NSelectItem DisplayName="Select Item '---'" sap:VirtualizedContainerService.HintSize="592,199.33333333333334" sap2010:WorkflowViewState.IdRef="NSelectItem_3" Item="2023" ScopeIdentifier="9d4ec022-bf2c-4c01-b9a6-3512c1be4f3f" Version="V3">
+              <uix:NSelectItem.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="3">
+                  <x:String>---</x:String>
+                  <x:String>2024</x:String>
+                  <x:String>2023</x:String>
+                </scg:List>
+              </uix:NSelectItem.Items>
+              <uix:NSelectItem.Target>
+                <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/reports/upload" DesignTimeRectangle="344, 615, 275, 42" DesignTimeScaleFactor="1.25" ElementType="Button" FriendlyName="'---'" FullSelectorArgument="&lt;webctrl aria-role='button' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='button' tag='BUTTON' type='button' class='btn dropdown-toggle bs-placeholder btn-default' aaname='---' check:innerText='---' /&gt;" Guid="ec6cd454-b2da-4480-94fb-5207c36087a1" InformativeScreenshot="951a35c27178d6db0410867047cd5f58.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - Upload Yearly Report' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="360, 624, 227, 25" ElementType="Text" FriendlyName="'---'" FullSelectorArgument="&lt;webctrl parentid='searchForm' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='searchForm' tag='SPAN' type='' class='filter-option pull-left' aaname='---' check:innerText='---' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAOcAAAAdCAYAAABR/XtfAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAACTSURBVHhe7dYxDcNQEAXB8GfwCZhAZAjGYBAGcZGbSC7SpdhiRnrN9Svda4AkcUKUOCFKnBAlTogSJ0SJE6LECVHihChxQpQ4IUqcECVOiBInRIkTor5xXsc2a63HtuOac3/e7r3P+XkH/kOcEOWthShxQpQ4IUqcECVOiBInRIkTosQJUeKEKHFClDghSpyQNPMBK6sk8fXdXLIAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NSelectItem.Target>
+            </uix:NSelectItem>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Select Report File'" sap:VirtualizedContainerService.HintSize="592,199.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="9d4ec022-bf2c-4c01-b9a6-3512c1be4f3f" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/reports/upload" DesignTimeRectangle="344, 676, 171, 42" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'Select Report File'" FullSelectorArgument="&lt;webctrl aaname='                                                  Select Report *' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='                                                  Select Report *' tag='LABEL' type='' class='btn btn-default' check:innerText='Select Report File' /&gt;" Guid="678d7418-7081-4004-bf0a-4624312bdb23" ImageBase64="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" InformativeScreenshot="ff11bd7575834f020549757821ed1b7a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - Upload Yearly Report' /&gt;" SearchSteps="FuzzySelector, Image" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayBetweenKeys="3E-06" DisplayName="Type Into 'Edit'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="592,262.6666666666667" sap2010:WorkflowViewState.IdRef="NTypeInto_3" InteractionMode="HardwareEvents" ScopeIdentifier="9d4ec022-bf2c-4c01-b9a6-3512c1be4f3f" Text="[FilePath.FullName + &quot;[k(Enter)]&quot;]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="234, 511, 263, 20" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'Edit'" FullSelectorArgument="&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;" Guid="7bdec12d-c768-4df3-acac-a0fb105f55e1" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAQsAAAAYCAYAAADtYNjTAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAABiSURBVHhe7dQxAQAgAAQhY33/YhrBC8BABc62C/AjCyCRBZDIAkhkASSyABJZAIksgEQWQCILIJEFkMgCSGQBJLIAElkAiSyARBZAIgsgkQWQyAJIZAEksgASWQCJLIBg9wGv716g6tKUvwAAAABJRU5ErkJggg==" InformativeScreenshot="50dee56e98731ea7a2303b4c3a5055c7.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Open' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V2" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Upload Report'" sap:VirtualizedContainerService.HintSize="592,199.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="9d4ec022-bf2c-4c01-b9a6-3512c1be4f3f" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/reports/upload" DesignTimeRectangle="334, 793, 145, 42" DesignTimeScaleFactor="1.25" ElementType="Button" FriendlyName="'Upload Report'" FullSelectorArgument="&lt;webctrl id='buttonUpload' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='buttonUpload' tag='BUTTON' type='button' aaname='Upload Report' check:innerText='Upload Report' /&gt;" Guid="0f657549-0e48-40a1-b4e9-773614fecd77" ImageBase64="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" InformativeScreenshot="851fbf0cdfe25b0f0c951113215539f6.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - Upload Yearly Report' /&gt;" SearchSteps="FuzzySelector, Image" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="592,1466" sap2010:WorkflowViewState.IdRef="Sequence_18">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="x:Boolean" Name="blnSuccess" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:UiElementExists DisplayName="Element Exists 'Button'" Exists="[blnSuccess]" sap:VirtualizedContainerService.HintSize="530,147.33333333333334" sap2010:WorkflowViewState.IdRef="UiElementExists_3">
+                <ui:UiElementExists.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="81688eef-3675-449d-bc6c-596271d8dab1" InformativeScreenshot="089beada3a2b5dc35b66cd7abfb1e96a" Selector="&lt;wnd app='chrome.exe' title='ACME System 1 - Upload Yearly Report*' /&gt;&lt;ctrl name='Report was uploaded - confirmation id is*' role='text' /&gt;" TimeoutMS="10000">
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:UiElementExists.Target>
+              </ui:UiElementExists>
+              <If Condition="[blnSuccess]" sap:VirtualizedContainerService.HintSize="530,1202.6666666666667" sap2010:WorkflowViewState.IdRef="If_2">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <If.Then>
+                  <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="496,956" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="ui:GenericValue" Name="strConfirmationMsg" />
+                    </Sequence.Variables>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="434,94" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                      <ui:CommentOut.Body>
+                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="449.6,219.2" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'Static'" sap:VirtualizedContainerService.HintSize="387.2,107.2" sap2010:WorkflowViewState.IdRef="GetValue_1">
+                            <ui:GetValue.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d9ad8070-c0c2-4e4b-8488-82df193b7858" InformativeScreenshot="63dbec7743a3668eb3e6e7f9c1ed9e03" Selector="&lt;wnd app='iexplore.exe' cls='#32770' title='Message from webpage' /&gt;&lt;wnd ctrlid='*' omit:title='Report was uploaded - confirmation id is *' /&gt;">
+                                <ui:Target.TimeoutMS>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:Target.TimeoutMS>
+                                <ui:Target.WaitForReady>
+                                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                                </ui:Target.WaitForReady>
+                              </ui:Target>
+                            </ui:GetValue.Target>
+                            <ui:GetValue.Value>
+                              <OutArgument x:TypeArguments="ui:GenericValue">[strConfirmationMsg]</OutArgument>
+                            </ui:GetValue.Value>
+                          </ui:GetValue>
+                        </Sequence>
+                      </ui:CommentOut.Body>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:CommentOut>
+                    <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text Report Uploaded with ID" sap:VirtualizedContainerService.HintSize="434,147.33333333333334" sap2010:WorkflowViewState.IdRef="GetValue_2">
+                      <ui:GetValue.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="70f89554-2cd3-4e5d-a17a-47a66aff4f9e" InformativeScreenshot="93473fbb8bdc965cc6ec03b9b68ab172" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='ACME System 1 - Upload Yearly Report *' /&gt;&lt;ctrl name='Report was uploaded - confirmation id is*' role='text' /&gt;" WaitForReady="INTERACTIVE">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                        </ui:Target>
+                      </ui:GetValue.Target>
+                      <ui:GetValue.Value>
+                        <OutArgument x:TypeArguments="ui:GenericValue">[strConfirmationMsg]</OutArgument>
+                      </ui:GetValue.Value>
+                    </ui:GetValue>
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,187.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace" Message="[&quot;Confirmation message :- &quot; + strConfirmationMsg]" />
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,187.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Trace" Message="[&quot;Extracted Id :- &quot; + strConfirmationMsg.Replace(&quot;Report was uploaded - confirmation id is &quot;, &quot;&quot;)]" />
+                    <Assign sap:VirtualizedContainerService.HintSize="434,125.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_2">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[out_strConfirmationID]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[strConfirmationMsg.Replace("Report was uploaded - confirmation id is ", "")]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" AlterIfDisabled="True" ClickType="CLICK_SINGLE" DisplayName="Click 'Button'" sap:VirtualizedContainerService.HintSize="434,130" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT">
+                      <ui:Click.CursorPosition>
+                        <ui:CursorPosition Position="Center">
+                          <ui:CursorPosition.OffsetX>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:CursorPosition.OffsetX>
+                          <ui:CursorPosition.OffsetY>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:CursorPosition.OffsetY>
+                        </ui:CursorPosition>
+                      </ui:Click.CursorPosition>
+                      <ui:Click.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7deeeabb-03cd-43c2-8ce9-0595e739ca9b" InformativeScreenshot="bc51b3c3c14d6fbaa3c3a3c79e6a38a6" Selector="&lt;wnd app='chrome.exe' title='ACME System 1 - Upload Yearly Report*' /&gt;&lt;ctrl name='OK' role='push button' /&gt;">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:Click.Target>
+                    </ui:Click>
+                  </Sequence>
+                </If.Then>
+                <If.Else>
+                  <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,81.33333333333333" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Throw Exception="[New BusinessRuleException(&quot;Can't upload this file &quot;+In_TaxID)]" sap:VirtualizedContainerService.HintSize="354,132" sap2010:WorkflowViewState.IdRef="Throw_1" />
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,170" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Error" Message="[&quot;Yearly report upload failed&quot;]" />
+                  </Sequence>
+                </If.Else>
+              </If>
+            </Sequence>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAReSURBVFhHvZdtbFNlFMcf3SxUfI0miLAEWdShCV+EGD9oUJBJAobwQb8IGklkKEQkcy8MZK90tGsnZbxsvkDmxsYkS8QFPhDYLIy+sbv2rhW3dYPFbGyVbYwJJMu2wzm3Prd317ZCc+uHf9vnPC/n13PPc57nMrZX6EPdQo39zyKf1wgAZJWQ2sJtzYVrkw+lDT9G5UbBZWB5TmC7XIlRHgnXJ4hSyecwAYwxAzawM/1EoKFSvLEh97eBjOw4xedmNg9k7LSFRO2sloEMg2Po0x3n+4tYMUaiUIr0SAiAiL5xwfrGqyvSt69hiZZuXzv6cwP+cQVAoRveqQtsizRBS33vHV6cTAD5agA0rG7o+SLSpHg0ODG9aGlFR+vy+kCl0l4p3HgpKkC6RgAA8GxSqQfY5zZgm22wq3XwFO+zOIeiA6z5OQyQctBXpTd6BdwZwrsNPVZuV2vJD3/YWOFl9xNmr5hULGwiW8v1OxvZpmZg5SKw7a2Y8e3Ax5c5g9EB1p4MA+hNnjssH7dlth2WHusMcrta8yt8wHLswIpwbEHbUW5P/e4KsK0XJDX2jBVw+30DPGkR7awIt8pOJ7xR03WO29VadNg/Ke1tLDJPfyvuUfbtbu5fn+MIvqK0HYmVAzMAzKJTAdCsXEQpBJimMQQwx+TNjzRm6PbUQ/x3lWc4cQC60nYZYOEhP+jxsTxqbAfMp3JurxZHNAY44p/iAHpFBB63eIF9jbmBJVhn9Bi5vdanPYAcASUA/mtgu7H24+H2nLVDttdoDZAaBWAB7Q4CwLo/d38cAE9Z7hsg4iOIC+B9BcDsfR6XdGrhFltW3XWe29VKq/JPSAAGHFsiyPs9LgBlJcQk8mGFA5ZlhxX1gTPcrlbKobCjOWavidvjAnjreEAG+Ph03yn21SVgmZfg9druAW5XK9mI2Y5HOct2gFUIbuH25w/EAfBmTRjgqH9ks1RK6VDBx9B5a+IF3sc1DbCE5TqoBEvb7drfE/N431xrx4MDrKwPA5D0Zeg8FxehwXvckHfh+icmVzCt7vfRxTkt/VmMzopinLv1IrxW03VTOTdaBKpjAbynOo6b/hzfwj46hxmO/ZQPGGZdGYac2plYZOgOSU4+s8HoFKxSzk2hHKBHg3VgntUnnxExI6AGIH3Y1NfGdmAufInHKk2ik48umBgRsusK3LDhbL9c6biYAZ1suyglMUbpILfX+R8QgNTUO77sg8beX58xeuAxrO3JeL7Pt4jjG3+5+lPf3UldpDlvH+++mXqgY/LlSj8srw1kcfsxMcZhFA1ASx0WYgDglSzhl9IfPcNpUQHwUro20iStNQsf47+v5ZjN6072lpy4Mrqw3BV81eSYKSPKjCq1D0ptc4Qx/6UK4a8XjY6hdcmUoJi86FsCCL2aIUQSdszGRHsYvylMWusRFNuLotoReh2UXs1CDXpXo9cl2l5ElwjxtblPEn50o0ZQQUmGf74ToZlro0+h8x4tMHhuvyezngAAAABJRU5ErkJggg==" InformativeScreenshot="7f9c6b1f3e95e454999792e0041db37d.jpg" Selector="&lt;html app='chrome.exe' url='*' /&gt;" Title="ACME System 1 - Upload Yearly Report" Url="*" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;I Finished &quot; + (FlowName.Split(&quot;\&quot;c).Last).ToString.Split(&quot;.&quot;)(0) + vbNewLine+&quot; at &quot;+ Date.Now.ToString]" />
+  </Sequence>
+</Activity>
